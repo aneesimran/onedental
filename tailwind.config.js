@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+    daisyui: {
+        themes: ["light", "cupcake"],
+        darkMode: false,
+    },
     darkMode: ["class"],
     content: [
         "./pages/**/*.{ts,tsx}",
@@ -17,10 +21,10 @@ module.exports = {
         },
         extend: {
             colors: {
-                "theme-dark-blue": "#053B50",
-                "theme-med-blue": "#176B87",
-                "theme-light-blue": "#64CCC5",
-                "theme-white": "#EEEEEE",
+                "theme-light": "#F5EFE7",
+                "theme-med": "#D8C4B6",
+                "theme-blue": "#4F709C",
+                "theme-dark-blue": "#213555",
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",
@@ -76,5 +80,5 @@ module.exports = {
             },
         },
     },
-    plugins: [require("tailwindcss-animate")],
+    plugins: [require("daisyui")],
 };
