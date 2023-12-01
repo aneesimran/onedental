@@ -3,7 +3,7 @@ import React from "react";
 const NavigationBar = () => {
     return (
         <>
-            <div className="navbar bg-theme-light text-theme-dark-blue">
+            <div className="navbar bg-theme-light text-theme-dark-blue sticky top-0">
                 <div className="navbar-start xl:pl-9">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost xl:hidden">
@@ -71,7 +71,10 @@ const NavigationBar = () => {
                         </ul>
                     </div>
                     <a className="btn btn-ghost normal-case text-xl">
-                        onedental
+                        <p>
+                            <span className="text-blue-500">one</span>
+                            <span>dental</span>
+                        </p>
                     </a>
                 </div>
                 <div className="navbar-end hidden xl:flex pr-10">
