@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     daisyui: {
-        themes: ["light", "cupcake"],
+        themes: ["light", "cupcake", "synthwave"],
         darkMode: false,
     },
     darkMode: ["class"],
@@ -25,6 +25,8 @@ module.exports = {
                 "theme-med": "#D8C4B6",
                 "theme-blue": "#4F709C",
                 "theme-dark-blue": "#213555",
+                "theme-light-grey": "#BDCDD6",
+
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
                 ring: "hsl(var(--ring))",

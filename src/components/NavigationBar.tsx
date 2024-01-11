@@ -3,7 +3,10 @@ import React from "react";
 const NavigationBar = () => {
     return (
         <>
-            <div className="navbar bg-theme-light text-theme-dark-blue sticky top-0">
+            <div
+                className="navbar bg-theme-dark-blue text-white sticky top-0 z-10"
+                data-theme="synthwave"
+            >
                 <div className="navbar-start xl:pl-9">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost xl:hidden">
@@ -23,7 +26,8 @@ const NavigationBar = () => {
                         </label>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-base-100 rounded-box w-60"
+                            className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow rounded-box w-60"
+                            data-theme="light"
                         >
                             <li>
                                 <a>About us</a>
@@ -85,7 +89,7 @@ const NavigationBar = () => {
                         <li tabIndex={0}>
                             <details>
                                 <summary>Treatments</summary>
-                                <ul className="p-2 w-48">
+                                <ul className="p-2 w-48" data-theme="light">
                                     <li>
                                         <a>Fresh Breath Service</a>
                                     </li>
@@ -113,12 +117,12 @@ const NavigationBar = () => {
                         <li tabIndex={0}>
                             <details>
                                 <summary>Advice</summary>
-                                <ul className="p-2 w-48">
+                                <ul className="p-2 w-48" data-theme="light">
                                     <li>
-                                        <a>Fees</a>
+                                        <a>Links</a>
                                     </li>
                                     <li>
-                                        <a>Testimonials</a>
+                                        <a>Privacy Policy</a>
                                     </li>
                                 </ul>
                             </details>
