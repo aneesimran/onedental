@@ -28,34 +28,64 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-theme-light grid grid-flow-row gap-4 justify-center  p-10 sm:flex sm:gap-8">
-                <div className="card w-60 bg-base-100 shadow-xl md:w-80">
-                    <figure className="px-4 pt-4">
-                        <img
-                            src="/images/dentist.jpg"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
+            <div className="bg-theme-light flex flex-wrap gap-4 justify-center p-10 md:flex-wrap  ">
+                <div
+                    className="card w-60 bg-base-100 shadow-xl image-full"
+                    data-theme="light"
+                >
+                    <figure>
+                        <img src="/images/dentist.jpg" alt="Shoes" />
                     </figure>
-                    <div className="card-body items-center text-center">
-                        <h2 className="card-title">About us</h2>
-                        <div className="card-actions">
-                            <button className="btn btn-primary">Buy Now</button>
+                    <div className="card-body">
+                        <div className="card-body items-center text-center justify-center">
+                            <button className="btn btn-outline  text-white">
+                                Teeth Whitening
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div className="card w-60 bg-base-100 shadow-xl md:w-80">
-                    <figure className="px-4 pt-4">
-                        <img
-                            src="/images/dentist.jpg"
-                            alt="Shoes"
-                            className="rounded-xl"
-                        />
+                <div
+                    className="card w-60 bg-base-100 shadow-xl image-full "
+                    data-theme="light"
+                >
+                    <figure>
+                        <img src="/images/dentist.jpg" alt="Shoes" />
                     </figure>
-                    <div className="card-body items-center text-center justify-center">
-                        <div className="card-actions">
-                            <button className="btn btn-primary">
+                    <div className="card-body">
+                        <div className="card-body items-center text-center justify-center">
+                            <button className="btn btn-outline  text-white">
+                                Teeth Whitening
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    className="card w-60 bg-base-100 shadow-xl image-full "
+                    data-theme="light"
+                >
+                    <figure>
+                        <img src="/images/dentist.jpg" alt="Shoes" />
+                    </figure>
+                    <div className="card-body">
+                        <div className="card-body items-center text-center justify-center">
+                            <button className="btn btn-outline  text-white">
+                                Teeth Whitening
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    className="card w-60 bg-base-100 shadow-xl image-full "
+                    data-theme="light"
+                >
+                    <figure>
+                        <img src="/images/dentist.jpg" alt="Shoes" />
+                    </figure>
+                    <div className="card-body">
+                        <div className="card-body items-center text-center justify-center">
+                            <button className="btn btn-outline  text-white">
                                 Teeth Whitening
                             </button>
                         </div>
