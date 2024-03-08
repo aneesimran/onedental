@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
-        <>
+        <div className="bg-theme-white">
             <NavigationBar></NavigationBar>
             <div
                 className="hero min-h-full"
@@ -28,70 +28,105 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-theme-light flex flex-wrap gap-4 justify-center p-10 md:flex-wrap  ">
-                <div
-                    className="card w-60 bg-base-100 shadow-xl image-full"
-                    data-theme="light"
-                >
-                    <figure>
-                        <img src="/images/dentist.jpg" alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <div className="card-body items-center text-center justify-center">
-                            <button className="btn btn-outline  text-white">
-                                Teeth Whitening
-                            </button>
+            <div className="flex flex-wrap gap-4 justify-center p-10 md:flex-wrap">
+                <div className="carousel carousel-center max-w-7xl p-4 space-x-4 bg-theme-light rounded-box">
+                    <div className="carousel-item">
+                        <div
+                            className="card w-40 bg-base-100 shadow-xl image-full sm:w-96"
+                            data-theme="light"
+                        >
+                            <figure>
+                                <img src="/images/dentist.jpg" alt="Shoes" />
+                            </figure>
+                            <div className="card-body">
+                                <div className="card-body items-center text-center justify-center">
+                                    <button className="btn btn-outline  text-white">
+                                        Dental Advice
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div
-                    className="card w-60 bg-base-100 shadow-xl image-full "
-                    data-theme="light"
-                >
-                    <figure>
-                        <img src="/images/dentist.jpg" alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <div className="card-body items-center text-center justify-center">
-                            <button className="btn btn-outline  text-white">
-                                Teeth Whitening
-                            </button>
+                    <div className="carousel-item">
+                        <div
+                            className="card w-40 ml-16 mr-2 bg-base-100 shadow-xl image-full sm:w-96 sm:m-0 "
+                            data-theme="light"
+                        >
+                            <figure>
+                                <img src="/images/dentist.jpg" alt="Shoes" />
+                            </figure>
+                            <div className="card-body">
+                                <div className="card-body items-center text-center justify-center">
+                                    <button className="btn btn-outline  text-white">
+                                        Teeth Whitening
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div
-                    className="card w-60 bg-base-100 shadow-xl image-full "
-                    data-theme="light"
-                >
-                    <figure>
-                        <img src="/images/dentist.jpg" alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <div className="card-body items-center text-center justify-center">
-                            <button className="btn btn-outline  text-white">
-                                Teeth Whitening
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <div
-                    className="card w-60 bg-base-100 shadow-xl image-full "
-                    data-theme="light"
-                >
-                    <figure>
-                        <img src="/images/dentist.jpg" alt="Shoes" />
-                    </figure>
-                    <div className="card-body">
-                        <div className="card-body items-center text-center justify-center">
-                            <button className="btn btn-outline  text-white">
-                                Teeth Whitening
-                            </button>
+                    <div className="carousel-item">
+                        <div
+                            className="card w-40 ml-20 mr-2 bg-base-100 shadow-xl image-full sm:w-96 sm:m-0"
+                            data-theme="light"
+                        >
+                            <figure>
+                                <img src="/images/dentist.jpg" alt="Shoes" />
+                            </figure>
+                            <div className="card-body">
+                                <div className="card-body items-center text-center justify-center">
+                                    <button className="btn btn-outline  text-white">
+                                        Treatments
+                                    </button>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+
+                    <div className="carousel-item">
+                        <div
+                            className="card w-40 ml-24 bg-base-100 shadow-xl image-full sm:w-96 sm:m-0"
+                            data-theme="light"
+                        >
+                            <figure>
+                                <img src="/images/dentist.jpg" alt="Shoes" />
+                            </figure>
+                            <div className="card-body">
+                                <div className="card-body items-center text-center justify-center">
+                                    <button className="btn btn-outline  text-white">
+                                        Contact us
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div className="divider items-center text-center justify-center text-xl">Why Choose Us?</div>
+            <div className="flex flex-wrap gap-4 justify-center p-10 md:gap-10">
+                <div className="card w-64  shadow-xl items-center bg-theme-med">
+                    <div className="card-body">
+                        <h2 className="card-title">Experienced Dentist</h2>
+                    </div>
+                </div>
+                <div className="card w-64 bg-theme-med shadow-xl items-center">
+                    <div className="card-body">
+                        <h2 className="card-title">Affordable</h2>
+                    </div>
+                </div>
+                <div className="card w-64 bg-theme-med shadow-xl items-center">
+                    <div className="card-body">
+                        <h2 className="card-title">Friendly</h2>
+                    </div>
+                </div>
+                <div className="card w-64 bg-theme-med shadow-xl items-center">
+                    <div className="card-body">
+                        <h2 className="card-title">Stress Free</h2>
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 }

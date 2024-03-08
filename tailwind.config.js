@@ -26,6 +26,9 @@ module.exports = {
                 "theme-blue": "#4F709C",
                 "theme-dark-blue": "#213555",
                 "theme-light-grey": "#BDCDD6",
+                "theme-white": "#FAF9F6",
+                "theme-light-blue": "#40A2E3",
+
 
                 border: "hsl(var(--border))",
                 input: "hsl(var(--input))",
