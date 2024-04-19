@@ -14,7 +14,7 @@ export default function Home() {
                 >
                     <div className="hero-overlay bg-opacity-80"></div>
                     <div className="hero-content text-center text-neutral-content">
-                        <div className="max-w-md">
+                        <div className="max-w-md text-white">
                             <h1 className="text-5xl font-bold p-8">
                                 Welcome to
                             </h1>

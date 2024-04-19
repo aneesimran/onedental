@@ -3,7 +3,7 @@ import { NavigationBar } from "@/components/NavigationBar";
 
 export default function AboutUs() {
     return (
-        <div className="bg-theme-light pb-20 md:h-screen">
+        <div className="bg-theme-light pb-20 ">
             <div className="">
                 <NavigationBar></NavigationBar>
             </div>
@@ -38,7 +38,7 @@ export default function AboutUs() {
                     <br />
                     <br />
                 </p>
-                <p className="text-lg font-semibold">
+                <p className="font-semibold">
                     Your Personalised Smile Journey:
                 </p>
                 <p>
@@ -52,7 +52,7 @@ export default function AboutUs() {
                     <br />
                     <br />
                 </p>
-                <p className="text-lg font-semibold">Family-Friendly Care:</p>
+                <p className="font-semibold">Family-Friendly Care:</p>
                 <p>
                     OneDental is a family-oriented practice welcoming patients
                     of all ages. We understand busy schedules, so we offer
@@ -60,7 +60,7 @@ export default function AboutUs() {
                     <br />
                     <br />
                 </p>
-                <p className="text-lg font-semibold">Why Choose OneDental?</p>
+                <p className="text-xl font-semibold">Why Choose OneDental?</p>
                 <ul className="list-disc list-inside text-left">
                     <br />
                     <li className="pb-4">
@@ -90,31 +90,94 @@ export default function AboutUs() {
                         and build relationships with patients.
                     </li>
                 </ul>
+                <br />
+                <p className="text-xl font-semibold">Meet Our Team!</p>
+                <br />
                 <div className="collapse collapse-arrow bg-theme-med mb-2">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        Principal Dentist
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p className="font-semibold">Dr Tariq Yunus BDS</p>
+                        <p>
+                            Qualified from the United Medical and Dental Schools
+                            of Guys and St Thomas’s Hospitals in London. He has
+                            over 25 yrs experience working mainly in general
+                            practice and is committed to remaining at the
+                            cutting edge of dentistry by attending courses and
+                            lectures regularly to further enhance his skills.
+                            Registered with the General Dental Council
+                            (GDC-73907) and a member of the British Dental
+                            Association.
+                        </p>
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-theme-med mb-2">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        Visiting Implantologist
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p className="font-semibold">Dr Robert Cope BDS</p>
+                        <p>
+                            Qualified from Birmingham Dental Hospital in 1992
+                            and completed the Certificate in Restorative
+                            Dentistry in 1998. Rob has successfully placed
+                            hundreds of implants over the years traveling the
+                            breadth of the country supporting various practices
+                            and patients. Registered with the GDC (GDC - 68088)
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Practice Manager
+                    </div>
+                    <div className="collapse-content">
+                        <p className="font-semibold">Obeeda Yunus</p>
+                        <p>
+                            Full time Mum, Wife and Qualified Manager. Lets just
+                            say she’s got her hands full! Working behind the
+                            scenes to ensure the smooth running of one dental
+                            since it was set up.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Dental Surgery Assistant
+                    </div>
+                    <div className="collapse-content">
+                        <p className="font-semibold">Nina Chadha</p>
+                        <p>
+                            Nina has years of experience as a dental nurse
+                            having worked previously in Birmingham . As a result
+                            of her experience and training she has been
+                            registered with the GDC since 2007 (GDC-108768).
+                            Nina is a vital part of our dental team,
+                            sympathetic, caring and always there to hold your
+                            hand through the treatment process.
+                        </p>
                     </div>
                 </div>
                 <div className="collapse collapse-arrow bg-theme-med">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
-                        Click to open this one and close others
+                        Implant Coordinator
                     </div>
                     <div className="collapse-content">
-                        <p>hello</p>
+                        <p className="font-semibold">Jenni Harris</p>
+                        <p>
+                            Jenni qualified as a dental nurse in 1979 from the
+                            London Hospital Dental Institute and has been
+                            working with Dr Cope since 2003. She has completed
+                            the national certificate in Dental Radiology and the
+                            Nobel Biocare Implant course. Registered with the
+                            GDC since 2007 (GDC - 114481)
+                        </p>
                     </div>
                 </div>
             </div>

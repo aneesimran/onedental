@@ -37,24 +37,32 @@ const NavigationBar = () => {
                                 <a>Treatments</a>
                                 <ul className="p-2">
                                     <li>
-                                        <a>Fresh Breath Service</a>
+                                        <Link href="/fresh-breath">
+                                            Fresh Breath
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Teeth Whitening</a>
+                                        <Link href="/teeth-whitening">
+                                            Teeth Whitening
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Invisalign</a>
+                                        <Link href="/invisalign">
+                                            Invisalign
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Children</a>
+                                        <Link href="/children">Children</Link>
                                     </li>
                                     <li>
-                                        <a>Dental Shop</a>
+                                        <Link href="/dental-shop">
+                                            Dental Shop
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a>Fees</a>
+                                <Link href="/fees">Fees</Link>
                             </li>
                             <li>
                                 <a>Testimonials</a>
@@ -92,25 +100,33 @@ const NavigationBar = () => {
                                 <summary>Treatments</summary>
                                 <ul className="p-2 w-48" data-theme="light">
                                     <li>
-                                        <a>Fresh Breath Service</a>
+                                        <Link href="/fresh-breath">
+                                            Fresh Breath
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Teeth Whitening</a>
+                                        <Link href="/teeth-whitening">
+                                            Teeth Whitening
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Invisalign</a>
+                                        <Link href="/invisalign">
+                                            Invisalign
+                                        </Link>
                                     </li>
                                     <li>
-                                        <a>Children</a>
+                                        <Link href="/children">Children</Link>
                                     </li>
                                     <li>
-                                        <a>Dental Shop</a>
+                                        <Link href="/dental-shop">
+                                            Dental Shop
+                                        </Link>
                                     </li>
                                 </ul>
                             </details>
                         </li>
                         <li>
-                            <a>Fees</a>
+                            <Link href="/fees">Fees</Link>
                         </li>
                         <li>
                             <a>Testimonials</a>
