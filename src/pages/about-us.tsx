@@ -24,10 +24,10 @@ export default function AboutUs() {
             </div>
             <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
                 <p>
-                    Feeling nervous about dental visits? You're not alone. At
-                    OneDental, we understand that anxiety is common. That's why
-                    we're dedicated to creating a comfortable and welcoming
-                    environment for every patient.
+                    Feeling nervous about dental visits? You&apos;re not alone.
+                    At OneDental, we understand that anxiety is common.
+                    That&apos;s why we&apos;re dedicated to creating a
+                    comfortable and welcoming environment for every patient.
                     <br />
                     <br />
                     Our friendly and compassionate team will be by your side
@@ -42,10 +42,10 @@ export default function AboutUs() {
                     Your Personalised Smile Journey:
                 </p>
                 <p>
-                    During your first visit, we'll listen attentively to your
-                    concerns and dental history. A thorough exam, will help us
-                    create a personalised treatment plan tailored to your unique
-                    needs. We prioritise safety and utilise cutting-edge
+                    During your first visit, we&apos;ll listen attentively to
+                    your concerns and dental history. A thorough exam, will help
+                    us create a personalised treatment plan tailored to your
+                    unique needs. We prioritise safety and utilise cutting-edge
                     technology. Digital X-rays, for example, emit minimal
                     radiation compared to traditional methods, making it safer
                     for you, our staff, and the environment.
