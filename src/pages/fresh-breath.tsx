@@ -22,7 +22,7 @@ export default function FreshBreath() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
+            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4">
                 <p className="font-semibold text-blue-600 text-xl pb-8">
                     A fresh mouth is a healthy mouth...
                 </p>

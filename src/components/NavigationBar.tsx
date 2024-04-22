@@ -31,7 +31,9 @@ const NavigationBar = () => {
                             data-theme="light"
                         >
                             <li>
-                                <Link href="/about-us">About us</Link>
+                                <Link href="/about-us">
+                                    <a>About us</a>
+                                </Link>
                             </li>
                             <li>
                                 <a>Treatments</a>
@@ -65,21 +67,20 @@ const NavigationBar = () => {
                                 <Link href="/fees">Fees</Link>
                             </li>
                             <li>
-                                <a>Testimonials</a>
-                            </li>
-                            <li>
                                 <a>Advice</a>
                                 <ul className="p-2">
                                     <li>
-                                        <a>Links</a>
+                                        <Link href="/advice-links">Links</Link>
                                     </li>
                                     <li>
-                                        <a>Privacy Policy</a>
+                                        <Link href="/privacy-policy">
+                                            Privacy Policy
+                                        </Link>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a>Contact Us</a>
+                                <Link href="/contact-us">Contact Us</Link>
                             </li>
                         </ul>
                     </div>
@@ -128,24 +129,23 @@ const NavigationBar = () => {
                         <li>
                             <Link href="/fees">Fees</Link>
                         </li>
-                        <li>
-                            <a>Testimonials</a>
-                        </li>
                         <li tabIndex={0}>
                             <details>
                                 <summary>Advice</summary>
                                 <ul className="p-2 w-48" data-theme="light">
                                     <li>
-                                        <a>Links</a>
+                                        <Link href="/advice-links">Links</Link>
                                     </li>
                                     <li>
-                                        <a>Privacy Policy</a>
+                                        <Link href="/privacy-policy">
+                                            Privacy Policy
+                                        </Link>
                                     </li>
                                 </ul>
                             </details>
                         </li>
                         <li>
-                            <a>Contact Us</a>
+                            <Link href="/contact-us">Contact Us</Link>
                         </li>
                     </ul>
                 </div>
