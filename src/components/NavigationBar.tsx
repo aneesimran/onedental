@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 
 const NavigationBar = () => {
@@ -31,12 +30,10 @@ const NavigationBar = () => {
                             data-theme="light"
                         >
                             <li>
-                                <Link href="/about-us">
-                                    <a>About us</a>
-                                </Link>
+                                <Link href="/about-us">About us</Link>
                             </li>
                             <li>
-                                <a>Treatments</a>
+                                Treatments
                                 <ul className="p-2">
                                     <li>
                                         <Link href="/fresh-breath">
@@ -67,7 +64,7 @@ const NavigationBar = () => {
                                 <Link href="/fees">Fees</Link>
                             </li>
                             <li>
-                                <a>Advice</a>
+                                Advice
                                 <ul className="p-2">
                                     <li>
                                         <Link href="/advice-links">Links</Link>
@@ -84,12 +81,12 @@ const NavigationBar = () => {
                             </li>
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">
+                    <div className="btn btn-ghost normal-case text-xl">
                         <Link href="/">
                             <span className="text-blue-500">one</span>
                             <span>dental</span>
                         </Link>
-                    </a>
+                    </div>
                 </div>
                 <div className="navbar-end hidden xl:flex pr-10">
                     <ul className="menu menu-horizontal px-1">
