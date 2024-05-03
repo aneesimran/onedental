@@ -1,14 +1,18 @@
 import Link from "next/link";
+import { useEffect } from "react";
 
 const NavigationBar = () => {
-    window.addEventListener("click", function (e) {
-        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-            if (!dropdown.contains(e.target)) {
-                // Click was outside the dropdown, close it
-                dropdown.open = false;
-            }
+    useEffect(() => {
+        window.addEventListener("click", function (e) {
+            document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+                if (!dropdown.contains(e.target)) {
+                    // Click was outside the dropdown, close it
+                    dropdown.open = false;
+                }
+            });
         });
-    });
+    }, []); // Empty dependency array ensures it runs only once
+
     return (
         <>
             <div
