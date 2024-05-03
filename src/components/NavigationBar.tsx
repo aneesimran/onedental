@@ -1,6 +1,14 @@
 import Link from "next/link";
 
 const NavigationBar = () => {
+    window.addEventListener("click", function (e) {
+        document.querySelectorAll(".dropdown").forEach(function (dropdown) {
+            if (!dropdown.contains(e.target)) {
+                // Click was outside the dropdown, close it
+                dropdown.open = false;
+            }
+        });
+    });
     return (
         <>
             <div
@@ -94,7 +102,7 @@ const NavigationBar = () => {
                             <Link href="/about-us">About us</Link>
                         </li>
                         <li tabIndex={0}>
-                            <details>
+                            <details className="dropdown">
                                 <summary>Treatments</summary>
                                 <ul className="p-2 w-48" data-theme="light">
                                     <li>
@@ -127,7 +135,7 @@ const NavigationBar = () => {
                             <Link href="/fees">Fees</Link>
                         </li>
                         <li tabIndex={0}>
-                            <details>
+                            <details className="dropdown">
                                 <summary>Advice</summary>
                                 <ul className="p-2 w-48" data-theme="light">
                                     <li>
