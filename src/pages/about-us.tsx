@@ -93,7 +93,7 @@ export default function AboutUs() {
                 <br />
                 <p className="text-xl font-semibold">Meet Our Team!</p>
                 <br />
-                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
                         Principal Dentist
@@ -113,7 +113,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         Visiting Implantologist
@@ -130,7 +130,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                <div className="collapse collapse-arrow bg-theme-med mb-4 shadow-lg">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         Practice Manager
@@ -145,7 +145,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-theme-med mb-2">
+                <div className="collapse collapse-arrow bg-theme-med mb-4 shadow-lg">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         Dental Surgery Assistant
@@ -163,7 +163,7 @@ export default function AboutUs() {
                         </p>
                     </div>
                 </div>
-                <div className="collapse collapse-arrow bg-theme-med">
+                <div className="collapse collapse-arrow bg-theme-med shadow-lg">
                     <input type="radio" name="my-accordion-2" />
                     <div className="collapse-title text-xl font-medium">
                         Implant Coordinator

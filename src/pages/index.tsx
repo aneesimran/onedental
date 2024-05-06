@@ -27,7 +27,7 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-wrap gap-4 justify-center p-10 md:flex-wrap">
-                    <div className="carousel carousel-center max-w-7xl p-4 space-x-4 bg-theme-light rounded-box">
+                    <div className="carousel  shadow-xl carousel-center max-w-7xl p-4 space-x-4 bg-theme-light rounded-box">
                         <div className="carousel-item">
                             <div
                                 className="card w-40 bg-base-100 shadow-xl image-full sm:w-96"
