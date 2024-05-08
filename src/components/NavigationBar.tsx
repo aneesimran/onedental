@@ -2,17 +2,6 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 const NavigationBar = () => {
-    useEffect(() => {
-        window.addEventListener("click", function (e) {
-            document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                if (!(e.target as Node)?.contains(dropdown)) {
-                    // Click was outside the dropdown, close it
-                    (dropdown as HTMLDivElement).open = false; // Cast to HTMLDivElement (or appropriate type)
-                }
-            });
-        });
-    }, []); // Empty dependency array ensures it runs only once
-
     return (
         <>
             <div
