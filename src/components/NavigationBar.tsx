@@ -5,8 +5,7 @@ const NavigationBar = () => {
     useEffect(() => {
         window.addEventListener("click", function (e) {
             document.querySelectorAll(".dropdown").forEach(function (dropdown) {
-                if (!e.target?.contains(dropdown)) {
-                    // Use optional chaining
+                if (!(e.target as Node)?.contains(dropdown)) {
                     // Click was outside the dropdown, close it
                     dropdown.open = false;
                 }
