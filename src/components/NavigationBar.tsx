@@ -7,7 +7,7 @@ const NavigationBar = () => {
             document.querySelectorAll(".dropdown").forEach(function (dropdown) {
                 if (!(e.target as Node)?.contains(dropdown)) {
                     // Click was outside the dropdown, close it
-                    dropdown.open = false;
+                    (dropdown as HTMLDivElement).open = false; // Cast to HTMLDivElement (or appropriate type)
                 }
             });
         });
