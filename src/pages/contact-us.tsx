@@ -5,22 +5,23 @@ import { useState } from "react";
 export default function ContactUs() {
     const [formData, setFormData] = useState({
         name: "",
+        email: "",
         subject: "",
         message: "",
     });
 
-    const handleChange = (event) => {
+    const handleChange = (event: { target: { name: any; value: any } }) => {
         setFormData({ ...formData, [event.target.name]: event.target.value });
     };
 
-    const handleSubmit = async (event) => {
+    const handleSubmit = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
 
         // Implement form submission logic here (e.g., send email)
         console.log("Form submitted:", formData);
 
         // Reset form after submission
-        setFormData({ name: "", subject: "", message: "" });
+        setFormData({ name: "", email: "", subject: "", message: "" });
     };
     return (
         <div className="bg-theme-light pb-20 md: min-h-screen ">
