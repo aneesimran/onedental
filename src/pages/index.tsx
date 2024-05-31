@@ -26,7 +26,7 @@ export default function Home() {
                     </div>
                 </div>
 
-                <div className="flex flex-wrap gap-4 justify-center p-10 md:flex-wrap">
+                <div className="flex flex-wrap gap-4 justify-center p-6 md:flex-wrap">
                     <div className="carousel  shadow-xl carousel-center max-w-7xl p-4 space-x-4 bg-theme-light rounded-box">
                         <div className="carousel-item">
                             <div
@@ -113,7 +113,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className="divider items-center text-center justify-center text-xl">
+                <div className="divider items-center text-center justify-center text-xl mx-auto md:w-2/4 ">
                     Why Choose Us?
                 </div>
                 <div className="flex flex-wrap gap-4 justify-center p-10 md:gap-10">
