@@ -3,25 +3,26 @@ import { NavigationBar } from "@/components/NavigationBar";
 import { useState } from "react";
 
 export default function ContactUs() {
-    const [formData, setFormData] = useState({
-        name: "",
-        subject: "",
-        message: "",
-    });
-
-    const handleChange = (event) => {
-        setFormData({ ...formData, [event.target.name]: event.target.value });
-    };
-
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-
-        // Implement form submission logic here (e.g., send email)
-        console.log("Form submitted:", formData);
-
-        // Reset form after submission
-        setFormData({ name: "", subject: "", message: "" });
-    };
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                access_key: "cd948114-4a69-40ea-b3d9-5fd2de9fee01",
+                name: e.target.name.value,
+                email: e.target.email.value,
+                message: e.target.message.value,
+            }),
+        });
+        const result = await response.json();
+        if (result.success) {
+            console.log(result);
+        }
+    }
     return (
         <div className="bg-theme-light pb-20 md: min-h-screen ">
             <div className="">
@@ -73,17 +74,13 @@ export default function ContactUs() {
                     </div>
                     <div className="mb-6 mt-10">
                         <label
-                            htmlFor="name"
+                            htmlFor="Name"
                             className="block text-sm font-medium text-gray-700"
-                        >
-                            Name
-                        </label>
+                        ></label>
                         <input
                             type="text"
-                            id="name"
                             name="name"
-                            value={formData.name}
-                            onChange={handleChange}
+                            placeholder="Your Name"
                             className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
                         />
@@ -92,32 +89,11 @@ export default function ContactUs() {
                         <label
                             htmlFor="email"
                             className="block text-sm font-medium text-gray-700"
-                        >
-                            Email Address
-                        </label>
+                        ></label>
                         <input
                             type="email"
-                            id="email"
                             name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label
-                            htmlFor="subject"
-                            className="block text-sm font-medium text-gray-700"
-                        >
-                            Subject
-                        </label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            value={formData.subject}
-                            onChange={handleChange}
+                            placeholder="Email"
                             className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
                         />
@@ -126,24 +102,44 @@ export default function ContactUs() {
                         <label
                             htmlFor="message"
                             className="block text-sm font-medium text-gray-700"
-                        >
-                            Message
-                        </label>
+                        ></label>
                         <textarea
-                            id="message"
                             name="message"
-                            value={formData.message}
-                            onChange={handleChange}
+                            placeholder="Write your message here..."
                             className="w-full rounded-md border border-gray-300 p-3 h-40 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
                         ></textarea>
                     </div>
+
                     <button
                         type="submit"
                         className="inline-flex items-center px-4 py-2 rounded-md bg-theme-blue text-white font-medium hover:bg-theme-dark-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                        onClick={() =>
+                            document.getElementById("my_modal_5").showModal()
+                        }
                     >
-                        Send Message
+                        Submit
                     </button>
+                    <dialog
+                        id="my_modal_5"
+                        className="modal modal-bottom sm:modal-middle"
+                    >
+                        <div className="modal-box">
+                            <h3 className="font-bold text-lg">
+                                Thanks for contacting us!{" "}
+                            </h3>
+                            <p className="py-4">
+                                We've received your message and will get back to
+                                you as soon as possible.
+                            </p>
+                            <div className="modal-action">
+                                <form method="dialog">
+                                    {/* if there is a button in form, it will close the modal */}
+                                    <button className="btn">Close</button>
+                                </form>
+                            </div>
+                        </div>
+                    </dialog>
                 </form>
             </div>
         </div>
