@@ -3,8 +3,9 @@ import { NavigationBar } from "@/components/NavigationBar";
 import { useState } from "react";
 
 export default function ContactUs() {
-    async function handleSubmit(e) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
+        const formData = e.target as HTMLFormElement;
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -13,9 +14,9 @@ export default function ContactUs() {
             },
             body: JSON.stringify({
                 access_key: "cd948114-4a69-40ea-b3d9-5fd2de9fee01",
-                name: e.target.name.value,
-                email: e.target.email.value,
-                message: e.target.message.value,
+                name: formData.fullname.value,
+                email: formData.email.value,
+                message: formData.message.value,
             }),
         });
         const result = await response.json();
@@ -79,7 +80,7 @@ export default function ContactUs() {
                         ></label>
                         <input
                             type="text"
-                            name="name"
+                            name="fullname"
                             placeholder="Your Name"
                             className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
@@ -114,33 +115,39 @@ export default function ContactUs() {
                     <button
                         type="submit"
                         className="inline-flex items-center px-4 py-2 rounded-md bg-theme-blue text-white font-medium hover:bg-theme-dark-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        onClick={() =>
-                            document.getElementById("my_modal_5").showModal()
-                        }
+                        onClick={() => {
+                            if (document) {
+                                (
+                                    document.getElementById(
+                                        "my_modal_5"
+                                    ) as HTMLFormElement
+                                ).showModal();
+                            }
+                        }}
                     >
                         Submit
                     </button>
-                    <dialog
-                        id="my_modal_5"
-                        className="modal modal-bottom sm:modal-middle"
-                    >
-                        <div className="modal-box">
-                            <h3 className="font-bold text-lg">
-                                Thanks for contacting us!{" "}
-                            </h3>
-                            <p className="py-4">
-                                We've received your message and will get back to
-                                you as soon as possible.
-                            </p>
-                            <div className="modal-action">
-                                <form method="dialog">
-                                    {/* if there is a button in form, it will close the modal */}
-                                    <button className="btn">Close</button>
-                                </form>
-                            </div>
-                        </div>
-                    </dialog>
                 </form>
+                <dialog
+                    id="my_modal_5"
+                    className="modal modal-bottom sm:modal-middle"
+                >
+                    <div className="modal-box">
+                        <h3 className="font-bold text-lg">
+                            Thanks for contacting us!
+                        </h3>
+                        <p className="py-4">
+                            We&apos;ve received your message and will get back
+                            to you as soon as possible.
+                        </p>
+                        <div className="modal-action">
+                            <form method="dialog">
+                                {/* if there is a button in form, it will close the modal */}
+                                <button className="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
             </div>
         </div>
     );
