@@ -34,32 +34,7 @@ const NavigationBar = () => {
                                 <Link href="/about-us">About us</Link>
                             </li>
                             <li>
-                                Treatments
-                                <ul className="p-2">
-                                    <li>
-                                        <Link href="/fresh-breath">
-                                            Fresh Breath
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/teeth-whitening">
-                                            Teeth Whitening
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/invisalign">
-                                            Invisalign
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/children">Children</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/dental-shop">
-                                            Dental Shop
-                                        </Link>
-                                    </li>
-                                </ul>
+                                <Link href="/treatments">Treatments</Link>
                             </li>
                             <li>
                                 <Link href="/fees">Fees</Link>
@@ -94,35 +69,8 @@ const NavigationBar = () => {
                         <li>
                             <Link href="/about-us">About us</Link>
                         </li>
-                        <li tabIndex={0}>
-                            <details className="dropdown">
-                                <summary>Treatments</summary>
-                                <ul className="p-2 w-48" data-theme="light">
-                                    <li>
-                                        <Link href="/fresh-breath">
-                                            Fresh Breath
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/teeth-whitening">
-                                            Teeth Whitening
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/invisalign">
-                                            Invisalign
-                                        </Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/children">Children</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/dental-shop">
-                                            Dental Shop
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </details>
+                        <li>
+                            <Link href="/treatments">Treatments</Link>
                         </li>
                         <li>
                             <Link href="/fees">Fees</Link>

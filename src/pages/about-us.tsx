@@ -93,6 +93,7 @@ export default function AboutUs() {
                 <br />
                 <p className="text-xl font-semibold">Meet Our Team!</p>
                 <br />
+
                 <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
                     <input type="radio" name="my-accordion-2" defaultChecked />
                     <div className="collapse-title text-xl font-medium">
