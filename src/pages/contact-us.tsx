@@ -1,11 +1,43 @@
-/* eslint-disable @next/next/no-img-element */
 import { NavigationBar } from "@/components/NavigationBar";
 import { useState } from "react";
 
 export default function ContactUs() {
+    const [formData, setFormData] = useState({
+        fullname: "",
+        email: "",
+        message: "",
+    });
+
+    const [isEmailValid, setIsEmailValid] = useState(true);
+
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+
+        if (name === "email") {
+            setIsEmailValid(value.includes("@"));
+        }
+    };
+
+    const resetForm = () => {
+        setFormData({
+            fullname: "",
+            email: "",
+            message: "",
+        });
+        setIsEmailValid(true);
+    };
+
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        const formData = e.target as HTMLFormElement;
+
+        if (!formData.email.includes("@")) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
         const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             headers: {
@@ -14,16 +46,20 @@ export default function ContactUs() {
             },
             body: JSON.stringify({
                 access_key: "cd948114-4a69-40ea-b3d9-5fd2de9fee01",
-                name: formData.fullname.value,
-                email: formData.email.value,
-                message: formData.message.value,
+                name: formData.fullname,
+                email: formData.email,
+                message: formData.message,
             }),
         });
         const result = await response.json();
         if (result.success) {
             console.log(result);
+            (
+                document.getElementById("submitModal") as HTMLDialogElement
+            ).showModal();
         }
     }
+
     return (
         <div className="bg-theme-light pb-20 md: min-h-screen ">
             <div className="">
@@ -75,12 +111,16 @@ export default function ContactUs() {
                     </div>
                     <div className="mb-6 mt-10">
                         <label
-                            htmlFor="Name"
+                            htmlFor="fullname"
                             className="block text-sm font-medium text-gray-700"
-                        ></label>
+                        >
+                            Name
+                        </label>
                         <input
                             type="text"
                             name="fullname"
+                            value={formData.fullname}
+                            onChange={handleChange}
                             placeholder="Your Name"
                             className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
@@ -90,22 +130,39 @@ export default function ContactUs() {
                         <label
                             htmlFor="email"
                             className="block text-sm font-medium text-gray-700"
-                        ></label>
+                        >
+                            Email
+                        </label>
                         <input
                             type="email"
                             name="email"
+                            value={formData.email}
+                            onChange={handleChange}
                             placeholder="Email"
-                            className="w-full px-3 py-4 rounded-md border border-gray-300 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
+                            className={`w-full px-3 py-4 rounded-md border ${
+                                isEmailValid
+                                    ? "border-gray-300"
+                                    : "border-red-500"
+                            } focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500`}
                             required
                         />
+                        {!isEmailValid && (
+                            <p className="text-red-500 text-sm mt-2">
+                                Please enter a valid email address.
+                            </p>
+                        )}
                     </div>
                     <div className="mb-6">
                         <label
                             htmlFor="message"
                             className="block text-sm font-medium text-gray-700"
-                        ></label>
+                        >
+                            Message
+                        </label>
                         <textarea
                             name="message"
+                            value={formData.message}
+                            onChange={handleChange}
                             placeholder="Write your message here..."
                             className="w-full rounded-md border border-gray-300 p-3 h-40 focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500"
                             required
@@ -115,21 +172,13 @@ export default function ContactUs() {
                     <button
                         type="submit"
                         className="inline-flex items-center px-4 py-2 rounded-md bg-theme-blue text-white font-medium hover:bg-theme-dark-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        onClick={() => {
-                            if (document) {
-                                (
-                                    document.getElementById(
-                                        "my_modal_5"
-                                    ) as HTMLFormElement
-                                ).showModal();
-                            }
-                        }}
+                        disabled={!isEmailValid || !formData.email}
                     >
                         Submit
                     </button>
                 </form>
                 <dialog
-                    id="my_modal_5"
+                    id="submitModal"
                     className="modal modal-bottom sm:modal-middle"
                 >
                     <div className="modal-box">
@@ -142,8 +191,9 @@ export default function ContactUs() {
                         </p>
                         <div className="modal-action">
                             <form method="dialog">
-                                {/* if there is a button in form, it will close the modal */}
-                                <button className="btn">Close</button>
+                                <button className="btn" onClick={resetForm}>
+                                    Close
+                                </button>
                             </form>
                         </div>
                     </div>
