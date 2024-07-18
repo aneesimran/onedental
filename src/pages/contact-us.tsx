@@ -1,7 +1,18 @@
 import { NavigationBar } from "@/components/NavigationBar";
 import { useState } from "react";
+import HCaptcha from "@hcaptcha/react-hcaptcha";
 
 export default function ContactUs() {
+    const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+
+    const handleCaptchaVerify = (token: string) => {
+        setCaptchaValue(token);
+    };
+
+    const handleCaptchaExpire = () => {
+        setCaptchaValue(null);
+    };
+
     const [formData, setFormData] = useState({
         fullname: "",
         email: "",
@@ -49,6 +60,7 @@ export default function ContactUs() {
                 name: formData.fullname,
                 email: formData.email,
                 message: formData.message,
+                "h-captcha-response": captchaValue,
             }),
         });
         const result = await response.json();
@@ -68,7 +80,7 @@ export default function ContactUs() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/contactcrop.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>
@@ -80,7 +92,7 @@ export default function ContactUs() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col justify-center w-4/5 mx-auto pt-20 leading-loose md:w-2/4 md:flex-row">
+            <div className="flex flex-col justify-center w-11/12 mx-auto pt-10 leading-loose md:pt-20 md:w-2/4 md:flex-row">
                 <div className="pr-10 pb-6 md:pb-0">
                     <p className="text-blue-600 text-lg font-bold">OneDental</p>
                     <p>51-53 Albert Street</p>
@@ -103,7 +115,7 @@ export default function ContactUs() {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </div>
-            <div className="w-5/6 shadow-xl mx-auto p-6 mt-20 leading-loose md:p-10 md:w-1/3 bg-theme-med rounded-3xl">
+            <div className="w-11/12 shadow-xl mx-auto p-6 mt-20 leading-loose md:p-10 md:w-1/3 bg-theme-med rounded-xl">
                 <form onSubmit={handleSubmit} className="w-full">
                     <div className="items-center text-center justify-center text-xl"></div>
                     <div className="divider items-center text-center justify-center text-xl">
@@ -169,10 +181,20 @@ export default function ContactUs() {
                         ></textarea>
                     </div>
 
+                    <div className="mb-6">
+                        <HCaptcha
+                            sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                            onVerify={handleCaptchaVerify}
+                            onExpire={handleCaptchaExpire}
+                        />
+                    </div>
+
                     <button
                         type="submit"
                         className="inline-flex items-center px-4 py-2 rounded-md bg-theme-blue text-white font-medium hover:bg-theme-dark-blue focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        disabled={!isEmailValid || !formData.email}
+                        disabled={
+                            !isEmailValid || !formData.email || !captchaValue
+                        }
                     >
                         Submit
                     </button>
