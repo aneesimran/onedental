@@ -80,7 +80,7 @@ export default function ContactUs() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/contactcrop.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>
@@ -92,7 +92,7 @@ export default function ContactUs() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-col justify-center w-11/12 mx-auto pt-20 leading-loose md:w-2/4 md:flex-row">
+            <div className="flex flex-col justify-center w-11/12 mx-auto pt-10 leading-loose md:pt-20 md:w-2/4 md:flex-row">
                 <div className="pr-10 pb-6 md:pb-0">
                     <p className="text-blue-600 text-lg font-bold">OneDental</p>
                     <p>51-53 Albert Street</p>

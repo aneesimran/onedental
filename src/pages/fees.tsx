@@ -22,7 +22,7 @@ export default function FreshBreath() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
+            <div className="w-10/12 mx-auto pt-10 leading-loose md:w-2/4 md:pt-20 ">
                 <p>
                     Good (or bad) habits start early. Prevention is always the
                     best way of ensuring your children achieve a perfectly

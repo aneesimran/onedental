@@ -10,7 +10,7 @@ export default function Treatments() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/treatments.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>
@@ -22,7 +22,126 @@ export default function Treatments() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
+            <div className="w-10/12 mx-auto pt-10 leading-loose visible md:hidden">
+                <p className="pb-8">
+                    Achieve a healthy, confident smile with our comprehensive
+                    dental treatment options. We offer a wide range of services
+                    to address all your oral health needs. Schedule a
+                    consultation today and let us help you create a brighter,
+                    healthier future for your smile.
+                </p>
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Fresh Breath
+                    </div>
+                    <div className="collapse-content">
+                        <p>Many things can cause bad breath, including:</p>
+                        <ul className="list-disc list-inside text-left pt-4">
+                            <li className="pb-2">
+                                Poor oral hygiene (not brushing and flossing
+                                properly)
+                            </li>
+                            <li className="pb-2">Gum disease</li>
+                            <li className="pb-2">
+                                Eating certain foods like onions or garlic
+                            </li>
+                            <li className="pb-2">
+                                Tobacco and alcohol products
+                            </li>
+                            <li className="pb-2">
+                                Dry mouth (caused by reduced saliva flow,
+                                certain medications or medical disorders)
+                            </li>
+                            <li>Systemic diseases </li>
+                        </ul>
+                        <p className="pt-4">
+                            We can teach you how to look after your teeth and
+                            gums with custom oral hygiene regimes. Correct tooth
+                            brushing and interdental techniques can help
+                            minimise and eliminate problems. Good oral hygiene
+                            is imperative in maintaining healthy gums and bone
+                            support for your teeth.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Teeth Whitening
+                    </div>
+                    <div className="collapse-content">
+                        <p>
+                            The flexi treatment allows you to carry out the
+                            teeth whitening procedure in the comfort of your own
+                            home or work , and yet benefit from the professional
+                            advice of a dentist.
+                        </p>
+                        <p className="pt-4">
+                            Your teeth are initially checked by a dentist to
+                            ensure they are suitable for teeth whitening.
+                        </p>
+                        <p className="pt-4">
+                            Impressions of your teeth are taken, from which two
+                            custom made trays are moulded. These precision trays
+                            fit your teeth perfectly and comfortably.
+                        </p>
+                        <p className="pt-4">
+                            At OneDental we use proven products including
+                            NiteWhite, polanight and ZOOM! whitening gels,
+                            giving you better and long lasting results.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Invisalign
+                    </div>
+                    <div className="collapse-content">
+                        <p>Contact us for more information</p>
+                    </div>
+                </div>
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Children
+                    </div>
+                    <div className="collapse-content">
+                        <p>
+                            Good (or bad) habits start early. Prevention is
+                            always the best way of ensuring your children
+                            achieve a perfectly healthy smile. Regular check ups
+                            with diet advice and oral hygiene instruction can
+                            ensure healthy teeth free of fillings. We want to
+                            offer parents all the information they need to
+                            ensure that they can work with their children so
+                            that they can enjoy the best possible oral health.
+                        </p>
+                    </div>
+                </div>
+                <div className="collapse shadow-lg collapse-arrow bg-theme-med mb-4">
+                    <input type="radio" name="my-accordion-2" />
+                    <div className="collapse-title text-xl font-medium">
+                        Dental Shop
+                    </div>
+                    <div className="collapse-content">
+                        <p>
+                            Don’t be fooled by glossy marketing and adverts.
+                            We’ll give you the low down on which oral hygiene
+                            products are suitable for you and what works and
+                            what you’re wasting your money on.
+                        </p>
+                        <p className="pt-4">
+                            We carry a selection of specialist and daily oral
+                            hygiene products to maintain that bright smile at
+                            competitive prices. The dentist or hygienist will be
+                            able to recommend which products suit you best.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className="w-2/3 mx-auto pt-20 leading-loose invisible hidden md:block xl:w-2/4 md:3/4 md:visible">
                 <p>
                     Achieve a healthy, confident smile with our comprehensive
                     dental treatment options. We offer a wide range of services

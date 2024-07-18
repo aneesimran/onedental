@@ -10,7 +10,7 @@ export default function FreshBreath() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/advice.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>
@@ -22,7 +22,7 @@ export default function FreshBreath() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
+            <div className="w-10/12 mx-auto pt-10 leading-loose md:pt-20 md:w-2/4 ">
                 <p>
                     The practice aims to meet the requirements of the Data
                     protection Act 2018, the general Data Protection Regulation

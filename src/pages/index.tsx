@@ -35,8 +35,8 @@ export default function Home() {
                             >
                                 <figure>
                                     <img
-                                        src="/images/dentist.jpg"
-                                        alt="Shoes"
+                                        src="/images/advice.jpg"
+                                        alt="advice"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -55,10 +55,7 @@ export default function Home() {
                                 data-theme="light"
                             >
                                 <figure>
-                                    <img
-                                        src="/images/dentist.jpg"
-                                        alt="Shoes"
-                                    />
+                                    <img src="/images/white1.jpg" alt="Shoes" />
                                 </figure>
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
@@ -98,7 +95,7 @@ export default function Home() {
                             >
                                 <figure>
                                     <img
-                                        src="/images/dentist.jpg"
+                                        src="/images/contact.jpg"
                                         alt="Shoes"
                                     />
                                 </figure>

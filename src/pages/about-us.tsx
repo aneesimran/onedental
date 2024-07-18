@@ -22,7 +22,7 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
-            <div className="w-2/3 mx-auto pt-20 leading-loose md:w-2/4 ">
+            <div className="w-10/12 mx-auto pt-10 leading-loose md:w-2/4 md:pt-20 ">
                 <p>
                     Feeling nervous about dental visits? You&apos;re not alone.
                     At OneDental, we understand that anxiety is common.
