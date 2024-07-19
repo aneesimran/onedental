@@ -122,7 +122,7 @@ export default function Home() {
                 <div className="divider items-center text-center justify-center text-xl mx-auto md:w-2/4 ">
                     Why Choose Us?
                 </div>
-                <div className="w-10/12 mx-auto pt-5 leading-loose md:w-4/12">
+                <div className="w-10/12 mx-auto pt-5 justify text-center leading-loose md:8/10 2xl:w-5/12 ">
                     <ul className="list-disc list-inside">
                         <li>
                             <span className="font-semibold">
