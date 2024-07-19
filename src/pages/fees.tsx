@@ -10,7 +10,7 @@ export default function FreshBreath() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/fees.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>

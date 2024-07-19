@@ -10,7 +10,7 @@ export default function AboutUs() {
             <div
                 className="hero h-72"
                 style={{
-                    backgroundImage: "url(/images/smile.jpg)",
+                    backgroundImage: "url(/images/about.jpg)",
                 }}
             >
                 <div className="hero-overlay bg-opacity-80"></div>

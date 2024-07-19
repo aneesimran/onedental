@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { NavigationBar } from "@/components/NavigationBar";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -42,7 +43,9 @@ export default function Home() {
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
                                         <button className="btn btn-outline  text-white">
-                                            Dental Advice
+                                            <Link href="/advice-links">
+                                                Dental Advice
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -60,7 +63,9 @@ export default function Home() {
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
                                         <button className="btn btn-outline  text-white">
-                                            Teeth Whitening
+                                            <Link href="/treatments">
+                                                Teeth Whitening
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -81,7 +86,9 @@ export default function Home() {
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
                                         <button className="btn btn-outline  text-white">
-                                            Treatments
+                                            <Link href="/treatments">
+                                                Treatments
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -102,7 +109,9 @@ export default function Home() {
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
                                         <button className="btn btn-outline  text-white">
-                                            Contact us
+                                            <Link href="/contact-us">
+                                                Contact us
+                                            </Link>
                                         </button>
                                     </div>
                                 </div>
@@ -113,6 +122,27 @@ export default function Home() {
                 <div className="divider items-center text-center justify-center text-xl mx-auto md:w-2/4 ">
                     Why Choose Us?
                 </div>
+                <div className="w-10/12 mx-auto pt-5 leading-loose md:w-4/12">
+                    <ul className="list-disc list-inside">
+                        <li>
+                            <span className="font-semibold">
+                                Gentle & Personalised Care:{" "}
+                            </span>
+                            Our friendly team puts your comfort first. We listen
+                            to your concerns and create a personalised treatment
+                            plan using the latest technology.
+                        </li>
+                        <li>
+                            <span className="font-semibold">
+                                Family-Friendly Practice:{" "}
+                            </span>
+                            We welcome patients of all ages with flexible
+                            appointments to fit your busy schedule. We are based
+                            in the heart of Rugby.
+                        </li>
+                    </ul>
+                </div>
+
                 <div className="flex flex-wrap gap-4 justify-center p-10 md:gap-10">
                     <div className="card w-64  shadow-xl items-center bg-theme-med border-1">
                         <div className="card-body">
