@@ -39,6 +39,7 @@ export default function Home() {
                                     <img
                                         src="/images/advice.jpg"
                                         alt="advice"
+                                        loading="lazy"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -59,7 +60,11 @@ export default function Home() {
                                 data-theme="light"
                             >
                                 <figure>
-                                    <img src="/images/white1.jpg" alt="Shoes" />
+                                    <img
+                                        src="/images/white1.jpg"
+                                        alt="Shoes"
+                                        loading="lazy"
+                                    />
                                 </figure>
                                 <div className="card-body">
                                     <div className="card-body items-center text-center justify-center">
@@ -82,6 +87,7 @@ export default function Home() {
                                     <img
                                         src="/images/dentist.jpg"
                                         alt="Shoes"
+                                        loading="lazy"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -105,6 +111,7 @@ export default function Home() {
                                     <img
                                         src="/images/contact.jpg"
                                         alt="Shoes"
+                                        loading="lazy"
                                     />
                                 </figure>
                                 <div className="card-body">
