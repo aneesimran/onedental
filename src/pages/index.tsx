@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import GoogleReviews from "@/components/GoogleReviews";
 import { NavigationBar } from "@/components/NavigationBar";
 import Link from "next/link";
 
@@ -164,6 +165,13 @@ export default function Home() {
                             <h2 className="card-title">Stress Free</h2>
                         </div>
                     </div>
+                </div>
+                <div className="divider items-center text-center justify-center text-xl mx-auto md:w-2/4 ">
+                    Reviews
+                </div>
+
+                <div>
+                    <GoogleReviews />
                 </div>
             </div>
         </div>

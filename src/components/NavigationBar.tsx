@@ -5,7 +5,7 @@ const NavigationBar = () => {
     return (
         <>
             <div
-                className="navbar bg-theme-dark-blue text-white sticky top-0 z-20"
+                className="navbar bg-theme-dark-blue text-white sticky top-0 z-50"
                 data-theme="synthwave"
             >
                 <div className="navbar-start xl:pl-9">
