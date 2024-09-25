@@ -39,7 +39,7 @@ export default function Home() {
                                     <img
                                         src="/images/advice.jpg"
                                         alt="advice"
-                                        loading="lazy"
+                                        loading="eager"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -63,7 +63,7 @@ export default function Home() {
                                     <img
                                         src="/images/white1.jpg"
                                         alt="Shoes"
-                                        loading="lazy"
+                                        loading="eager"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -87,7 +87,7 @@ export default function Home() {
                                     <img
                                         src="/images/dentist.jpg"
                                         alt="Shoes"
-                                        loading="lazy"
+                                        loading="eager"
                                     />
                                 </figure>
                                 <div className="card-body">
@@ -111,7 +111,7 @@ export default function Home() {
                                     <img
                                         src="/images/contact.jpg"
                                         alt="Shoes"
-                                        loading="lazy"
+                                        loading="eager"
                                     />
                                 </figure>
                                 <div className="card-body">
